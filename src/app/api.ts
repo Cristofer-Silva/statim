@@ -55,9 +55,15 @@ export interface NetworkMetrics {
 /* ── API functions ── */
 
 async function fetchJson<T>(url: string, init?: RequestInit): Promise<T> {
-    const res = await fetch(url, init);
-    if (!res.ok) throw new Error(`API error ${res.status}`);
-    return res.json();
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 2000);
+    try {
+        const res = await fetch(url, { ...init, signal: controller.signal });
+        if (!res.ok) throw new Error(`API error ${res.status}`);
+        return res.json();
+    } finally {
+        clearTimeout(timeout);
+    }
 }
 
 /** Check backend health and operating mode. */
