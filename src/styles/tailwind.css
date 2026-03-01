@@ -1,0 +1,16 @@
+/**
+ * tailwind.css
+ *
+ * Tailwind CSS v4 configuration.
+ * Uses `source(none)` to disable automatic content detection,
+ * then explicitly scans all JS/TS/JSX/TSX files under `src/`.
+ *
+ * @project  CheeseHacks 2026 — Remote Surgery Interface
+ * @version  0.0.1
+ * @since    2026-02-28
+ */
+
+@import 'tailwindcss' source(none);
+@source '../**/*.{js,ts,jsx,tsx}';
+
+@import 'tw-animate-css';

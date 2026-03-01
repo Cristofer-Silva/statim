@@ -1,0 +1,13 @@
+/**
+ * index.css
+ *
+ * Global stylesheet entry point for the Remote Surgery Interface.
+ * Import order matters: Tailwind base first, then custom theme overrides.
+ *
+ * @project  CheeseHacks 2026 — Remote Surgery Interface
+ * @version  0.0.1
+ * @since    2026-02-28
+ */
+
+@import './tailwind.css';
+@import './theme.css';

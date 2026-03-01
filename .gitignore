@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+backend/venv/
+
+# Build output
+dist/
+
+# Environment files
+.env
+backend/.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Logs
+*.log
+
+# Embedded repos
+cheesehacks2026-repo/
+statim-repo/
